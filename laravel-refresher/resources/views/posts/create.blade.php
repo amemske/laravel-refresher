@@ -5,12 +5,12 @@
 
 @section('content')
 <form action="{{ route('posts.store')}}" method="POST">
-    <div>
-        <input type="text" name="title">
-    </div>
-    <div>
-        <textarea name="content"></textarea>
-    </div>
+    @csrf
+   
+    @include('posts.partials.form')
+    
+
+
     <div>
         <input type="submit" value="Create">
     </div>
